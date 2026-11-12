@@ -40,10 +40,24 @@ The data covered 20,370 games across 10 European competitions over five seasons 
 
 - **Yes, but the effect is marginal.** After controlling for natural game progression, the goal rate rises by roughly 9% after a red card, robust across specifications. The flat-baseline estimate (~31%) is largely explained by goals becoming more frequent late in matches regardless.
 - **The two sides largely offset.** The carded team scores less and its opponent more, with a small net positive effect. This is why raw whole-game totals look almost flat (2.70 goals with a red card vs 2.64 without, p = 0.13).
-- **Timing matters.** A red card adds between about 0.02 and 0.20 expected goals, with early cards having the largest impact.
 - **League variation.** R ranges from 1.06 (2. Bundesliga) to 1.21 (Primera).
 
-This is relevant to in-play over/under markets: an early red card is more likely to tip a borderline line than a late one.
+### Expected additional goals
+
+Using S3 (R = 1.087), the expected additional goals from a red card at minute *m* are (R − 1) × the baseline expected goals over the remaining time:
+
+| Red card minute | Remaining minutes | Baseline expected goals | Expected additional goals |
+|---|---|---|---|
+| 10 | 80 | 2.21 | 0.20 |
+| 30 | 60 | 1.72 | 0.15 |
+| 45 | 45 | 1.38 | 0.12 |
+| 60 | 30 | 1.01 | 0.09 |
+| 75 | 15 | 0.62 | 0.05 |
+| 85 | 5 | 0.28 | 0.02 |
+
+The expected additional goals range from around 0.02 to 0.20, which is marginal at the level of an individual game. The rate is genuinely elevated after a red card, but the remaining time is generally insufficient for this to result in a meaningfully larger goal count in a single game, particularly as most red cards happen later on. Timing does matter, however: early red cards in particular can lead to more goals.
+
+This is relevant to in-play over/under markets: an early red card (0.15-0.20 additional goals) is more likely to tip a borderline line than a late one (0.02-0.05).
 
 **Limitations:** event times are capped at 45 and 90 minutes, which inflates late-phase rates; timing is anchored to the first card (multi-card games are about 2% of the data); and there are no pre-match team strength ratings. See the report for details and future work.
 
